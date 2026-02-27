@@ -1,0 +1,223 @@
+/* Mengatur ulang gaya dasar dan variabel warna netral */
+:root {
+    --bg-color: #fcfcfc;
+    --text-color: #333333;
+    --accent-color: #555555;
+    --light-gray: #eeeeee;
+}
+
+html {
+    /* Efek gulir halus saat menu diklik */
+    scroll-behavior: smooth; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* NAVBAR STICKY */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.95); /* Sedikit transparan */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid var(--light-gray);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #888;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* BAGIAN UMUM UNTUK SETIAP SECTION */
+section {
+    padding: 100px 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* PROJECTS GRID */
+.projects-grid {
+    display: grid;
+    /* Grid yang menyesuaikan otomatis sesuai ukuran layar */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden; /* Penting untuk efek zoom gambar */
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease; /* Transisi halus saat gambar di-zoom */
+}
+
+/* Efek Hover Elegan: Zoom in gambar sedikit */
+.project-card:hover img {
+    transform: scale(1.05); 
+}
+
+.project-info {
+    padding: 20px 0;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+/* ABOUT SECTION */
+.about-content {
+    display: flex;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.profile-img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    margin-top: 15px;
+    list-style-position: inside;
+}
+
+/* CONTACT SECTION */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+/* MEDIA QUERIES (Responsif untuk Mobile & Tablet) */
+@media (max-width: 768px) {
+    .navbar { padding: 20px; flex-direction: column; gap: 15px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .about-content { flex-direction: column; text-align: center; }
+    .about-text h2 { text-align: center; }
+    section { padding: 80px 20px; }
+}
