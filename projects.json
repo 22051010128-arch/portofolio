@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Villa Serenity",
+    "year": "2024",
+    "category": "Residensial",
+    "role": "Lead Architect",
+    "description": "Desain villa tropis modern yang menyatu dengan alam sekitarnya, memaksimalkan pencahayaan alami dan sirkulasi udara.",
+    "thumbnail_url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery_urls": ["url1.jpg", "url2.jpg"]
+  },
+  {
+    "id": 2,
+    "title": "Urban Oasis Hub",
+    "year": "2023",
+    "category": "Publik",
+    "role": "Architectural Designer",
+    "description": "Pusat komunitas komersial di tengah kota dengan pendekatan ruang hijau terbuka dan fasad yang dinamis.",
+    "thumbnail_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery_urls": ["url1.jpg", "url2.jpg"]
+  },
+  {
+    "id": 3,
+    "title": "Eco Masterplan District 9",
+    "year": "2025",
+    "category": "Masterplan",
+    "role": "Urban Planner",
+    "description": "Perencanaan distrik mandiri masa depan yang berfokus pada keberlanjutan energi dan integrasi transportasi massal.",
+    "thumbnail_url": "https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery_urls": ["url1.jpg", "url2.jpg"]
+  }
+]
